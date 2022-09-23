@@ -1,0 +1,273 @@
+html {
+  background-color: #eae8fe;
+}
+
+body {
+  box-sizing: border-box;
+  width: 748px;
+  margin: 0 auto;
+}
+
+.header-logo-img {
+  display: block;
+  margin: 0 auto 68px;
+  width: 386px;
+}
+
+.container-vending-machine {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+.wrap-beverage {
+  width: 360px;
+  padding: 31px 27px 28px;
+  background-color: #ffffff;
+  margin-right: 28px;
+}
+
+.cont-beverage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.btn-beverage {
+  position: relative;
+  width: 94px;
+  height: 130px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.5));
+  border: none;
+  background-color: #ffffff;
+  padding: 11px 12px 9px;
+}
+
+.beverage-img {
+  width: 36px;
+  margin-bottom: 6px;
+}
+
+.beverage-name {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 7px;
+}
+
+.beverage-price {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: #ffffff;
+  background-color: #6327fe;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.btn-beverage:hover {
+  outline: 3px solid #6327fe;
+}
+
+/* sold-out */
+.sold-out::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  background-image: url(img/Sold-out.png);
+  background-size: 58px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+.sold-out:hover {
+  outline: none;
+  cursor: default;
+}
+
+.calc {
+  margin-top: 20px;
+}
+
+.calc-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.calc-flex:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.balance,
+.calc-flex {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  border-radius: 5px;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 33px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  background-color: #eae8fe;
+  padding: 7px 10px;
+  /* border-radius: 5px; */
+}
+
+.return-btn {
+  /* font-size: 1.3rem;
+  line-height: 1.9rem; */
+  border-radius: 5px;
+  width: 94px;
+  height: 33px;
+  padding: 6px 9px 8px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.put-txt {
+  box-sizing: border-box;
+  width: 200px;
+  height: 33px;
+  /* font-size: 1.3rem;
+  line-height: 1.9rem; */
+  border-radius: 5px;
+  color: #bdbdbd;
+  border: 1px solid #bdbdbd;
+  padding: 6px 0 8px 6px;
+}
+
+.put-btn {
+  /* font-size: 1.3rem;
+  line-height: 1.9rem; */
+  border-radius: 5px;
+  width: 94px;
+  height: 33px;
+  padding: 6px 35px 7px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.selected-beverage {
+  width: 200px;
+  height: 106px;
+  overflow-y: scroll;
+  padding: 12px;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  background-color: #eae8fe;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.selected-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  padding: 6px 10px 7px;
+}
+
+.selected-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.selected-item > img {
+  width: 18px;
+  height: 33px;
+  margin-right: 10px;
+}
+
+.count-item {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 4px 11px 6px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.item-title {
+  margin-right: auto;
+}
+
+/* 스크롤바 */
+.selected-beverage::-webkit-scrollbar {
+  width: 4px;
+}
+.selected-beverage::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: #fff;
+  border-radius: 50px;
+  height: 79px;
+}
+.selected-beverage::-webkit-scrollbar-track {
+  background-color: #eae8fe;
+}
+
+.get-btn {
+  width: 94px;
+  height: 106px;
+  padding: 44px 35px;
+  background-color: #6327fe;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.wrap-pocket-money {
+  width: 360px;
+  background-color: #fff;
+  padding: 9px 17px;
+  margin-bottom: 28px;
+}
+
+.pocket-money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 306px;
+  height: 32px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 6px 10px 6px;
+  background-color: #eae8fe;
+  border-radius: 5px;
+}
+
+.wrap-got-beverage {
+  width: 360px;
+  height: 474px;
+  background-color: #fff;
+  padding: 25px 27px 0;
+}
+
+.got-beverage {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.got-page {
+  width: 306px;
+  height: 364px;
+  margin-bottom: 6px;
+}
+
+.total-money {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-align: right;
+}
