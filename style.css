@@ -1,5 +1,13 @@
+:root {
+  --main-color: #eae8fe;
+  --white-color: #ffffff;
+  --border-color: #bdbdbd;
+  --point-color: #6327fe;
+}
+
+/* html배경컬러 --main-color랑 같은지 확인할 것 !*/
 html {
-  background-color: #eae8fe;
+  background-color: var(--main-color);
 }
 
 body {
@@ -7,6 +15,11 @@ body {
   width: 748px;
   margin: 0 auto;
 }
+
+/* strong {
+  display: block;
+} 
+strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
 
 .header-logo-img {
   display: block;
@@ -23,7 +36,7 @@ body {
 .wrap-beverage {
   width: 360px;
   padding: 31px 27px 28px;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   margin-right: 28px;
 }
 
@@ -40,7 +53,7 @@ body {
   border-radius: 10px;
   filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.5));
   border: none;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   padding: 11px 12px 9px;
 }
 
@@ -59,26 +72,26 @@ body {
   display: block;
   font-size: 1.2rem;
   line-height: 1.2rem;
-  color: #ffffff;
-  background-color: #6327fe;
+  color: var(--white-color);
+  background-color: var(--point-color);
   padding: 5px 15px;
   border-radius: 50px;
 }
 
-.btn-beverage:hover {
-  outline: 3px solid #6327fe;
+.cont-beverage .active {
+  outline: 3px solid var(--point-color);
 }
 
 /* sold-out */
 .sold-out::after {
-  content: '';
+  content: '품절';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  background-image: url(img/Sold-out.png);
+  background-image: url(../images/Sold-out.png);
   background-size: 58px;
   background-repeat: no-repeat;
   background-position: center;
@@ -117,14 +130,11 @@ body {
   height: 33px;
   font-size: 1.4rem;
   line-height: 2rem;
-  background-color: #eae8fe;
+  background-color: var(--main-color);
   padding: 7px 10px;
-  /* border-radius: 5px; */
 }
 
 .return-btn {
-  /* font-size: 1.3rem;
-  line-height: 1.9rem; */
   border-radius: 5px;
   width: 94px;
   height: 33px;
@@ -136,17 +146,13 @@ body {
   box-sizing: border-box;
   width: 200px;
   height: 33px;
-  /* font-size: 1.3rem;
-  line-height: 1.9rem; */
   border-radius: 5px;
-  color: #bdbdbd;
-  border: 1px solid #bdbdbd;
+  color: var(--border-color);
+  border: 1px solid var(--border-color);
   padding: 6px 0 8px 6px;
 }
 
 .put-btn {
-  /* font-size: 1.3rem;
-  line-height: 1.9rem; */
   border-radius: 5px;
   width: 94px;
   height: 33px;
@@ -161,8 +167,8 @@ body {
   padding: 12px;
   font-size: 0.9rem;
   line-height: 1.3rem;
-  background-color: #eae8fe;
-  border: 1px solid #bdbdbd;
+  background-color: var(--main-color);
+  border: 1px solid var(--border-color)
   border-radius: 5px;
 }
 
@@ -171,7 +177,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   margin-bottom: 6px;
   border-radius: 5px;
   padding: 6px 10px 7px;
@@ -191,7 +197,7 @@ body {
   font-size: 1.4rem;
   line-height: 2rem;
   padding: 4px 11px 6px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid var(--border-color)
   border-radius: 5px;
 }
 
@@ -206,29 +212,26 @@ body {
 .selected-beverage::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   border: 2px solid transparent;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 50px;
   /* height: 79px; */
 }
-/* .selected-beverage::-webkit-scrollbar-track {
-  background-color: transparent;
-} */
 
 .get-btn {
   width: 94px;
   height: 106px;
   padding: 44px 35px;
-  background-color: #6327fe;
+  background-color: var(--point-color);
   font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--white-color);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
 .wrap-pocket-money {
   width: 360px;
-  background-color: #fff;
+  background-color: var(--white-color);
   padding: 9px 17px;
   margin-bottom: 28px;
 }
@@ -243,14 +246,14 @@ body {
   font-size: 1.4rem;
   line-height: 2rem;
   padding: 6px 10px 6px;
-  background-color: #eae8fe;
+  background-color: var(--main-color);
   border-radius: 5px;
 }
 
 .wrap-got-beverage {
   width: 360px;
   height: 474px;
-  background-color: #fff;
+  background-color: var(--white-color);
   padding: 25px 27px 0;
 }
 
@@ -274,9 +277,8 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  /* 창이 왜 안줄어들까..? */
   html {
-    background-color: #fff;
+    background-color: var(--white-color);
   }
 
   body {

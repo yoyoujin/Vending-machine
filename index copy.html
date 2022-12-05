@@ -13,23 +13,66 @@
 <body>
   <header>
     <h1 class="header-title screen-out">Cola Cola</h1>
-    <img class="header-logo-img" src="/images/logo.png" alt="자판기 로고 이미지" />
+    <img class="header-logo-img" src="/img/logo.png" alt="자판기 로고 이미지" />
   </header>
   <main class="container-vending-machine">
     <section class="wrap-beverage">
       <h2 class="screen-out">음료 자판기</h2>
       <ul class="cont-beverage">
+        <li>
+          <button class="btn-beverage" type="button">
+            <img class="beverage-img" src="/img/Original_Cola.png" alt="" />
+            <strong class="beverage-name">Original_Cola</strong>
+            <strong class="beverage-price">1000원</strong>
+          </button>
+        </li>
+        <!-- <li>
+          <button class="btn-beverage sold-out" type="button">
+            <img class="beverage-img" src="img/Violet_Cola.png" alt="" />
+            <strong class="beverage-name">Violet_Cola</strong>
+            <strong class="beverage-price">1000원</strong>
+          </button>
+        </li>
+        <link>
+        <button class="btn-beverage" type="button">
+          <img class="beverage-img" src="img/Yellow_Cola.png" alt="" />
+          <strong class="beverage-name">Yellow_Cola</strong>
+          <strong class="beverage-price">1000원</strong>
+        </button>
+        </link>
+        <li>
+          <button class="btn-beverage" type="button">
+            <img class="beverage-img" src="img/Cool_Cola.png" alt="쿨 콜라" />
+            <strong class="beverage-name">Cool_Cola</strong>
+            <strong class="beverage-price">1000원</strong>
+          </button>
+        </li>
+        <li>
+          <button class="btn-beverage" type="button">
+            <img class="beverage-img" src="img/Green_Cola.png" alt="" />
+            <strong class="beverage-name">Green_Cola</strong>
+            <strong class="beverage-price">1000원</strong>
+          </button>
+        </li>
+        <li>
+          <button class="btn-beverage" type="button">
+            <img class="beverage-img" src="img/Orange_Cola.png" alt="" />
+            <strong class="beverage-name">Orange_Cola</strong>
+            <strong class="beverage-price">1000원</strong>
+          </button>
+        </li> -->
       </ul>
       <form class="calc">
         <div class="calc-flex">
           <p class="balance">
             잔액:
-            <strong class="txt-balance">0원</strong>
+            <strong>1,000원</strong>
           </p>
           <button class="return-btn" type="button">거스름돈 반환</button>
         </div>
         <div class="calc-flex">
           <label for="">
+            <!-- label for랑 연결해주기위해서 input에 id를 써줘야하는지!-->
             <input class="put-txt" type="text" placeholder="입금액 입력" />
           </label>
           <button class="put-btn" type="button">입금</button>
@@ -63,7 +106,7 @@
     </section>
     <div class="container-got-beverage">
       <section class="wrap-pocket-money">
-        <h2 class="pocket-money">소지금 : <strong class="txt-pocket-money">25,000원</strong></h2>
+        <h2 class="pocket-money">소지금 : <strong>25,000원</strong></h2>
         <!-- <h2 class="screen-out">소지금</h2>
           <p class="pocket-money">
             소지금 :
@@ -74,11 +117,9 @@
         <h2 class="got-beverage">획득한 음료</h2>
         <ul class="selected-beverage got-page">
           <!-- <li class="selected-item">
-              <button>
-                <img src="/img/Original_Cola.png" alt="" />
-                <strong class="item-title">Original_Cola</strong>
-                <strong class="count-item">1</strong>
-              </button>
+              <img src="/img/Original_Cola.png" alt="" />
+              <strong class="item-title">Original_Cola</strong>
+              <strong class="count-item">1</strong>
             </li>
             <li class="selected-item">
               <img src="/img/Green_Cola.png" alt="" />
