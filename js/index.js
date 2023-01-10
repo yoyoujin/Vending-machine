@@ -8,6 +8,7 @@ const txtPut = document.querySelector('.put-txt');
 const btnPut = document.querySelector('.put-btn');
 const txtPocketMoney = document.querySelector('.txt-pocket-money');
 const selectedBeverage = document.querySelector('.selected-beverage');
+const btnGet = document.querySelector('.get-btn');
 
 console.log(colaData);
 
@@ -59,13 +60,12 @@ btnReturn.addEventListener('click', (event) => {
     txtPocketMoney.textContent = (inhandMoney + balance).toLocaleString() + '원';
     txtBalance.textContent = 0 + '원';
   } else {
-    alert('잔액이 없습니다~~~');
+    alert('잔액이 잔액이 없습니다 🥹');
   }
 });
 
 // 콜라 버튼 클릭시 카트에 리스트 생성
 const btnCola = document.querySelectorAll('.btn-beverage');
-console.log(btnCola);
 
 btnCola.forEach((item) => {
   item.addEventListener('click', (event) => {
@@ -112,7 +112,12 @@ btnCola.forEach((item) => {
         );
       }
     } else {
-      alert('돈 넣고 머거~');
+      alert('잔액이 없습니다 🥹');
     }
   });
 });
+
+// 카트에 있는 콜라 클릭 시, 장바구니 빼기
+
+// 획득버튼 클릭 시 획득한 음료 리스트에 렌더링해주기
+btnGet.addEventListener('click', () => {});

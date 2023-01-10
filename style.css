@@ -147,9 +147,13 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   width: 200px;
   height: 33px;
   border-radius: 5px;
-  color: var(--border-color);
+  color: rgb(32, 30, 30);
   border: 1px solid var(--border-color);
   padding: 6px 0 8px 6px;
+}
+
+.put-txt::placeholder {
+  color: var(--border-color);
 }
 
 .put-btn {
@@ -168,23 +172,28 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   font-size: 0.9rem;
   line-height: 1.3rem;
   background-color: var(--main-color);
-  border: 1px solid var(--border-color)
+  border: 1px solid var(--border-color);
   border-radius: 5px;
+}
+
+.selected-beverage > li {
+  margin-bottom: 6px;
+}
+
+.selected-item:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 .selected-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-sizing: border-box;
   align-items: center;
   background-color: var(--white-color);
-  margin-bottom: 6px;
+  width: 100%;
   border-radius: 5px;
   padding: 6px 10px 7px;
-}
-
-.selected-item:nth-last-child(1) {
-  margin-bottom: 0;
 }
 
 .selected-item > img {
@@ -197,7 +206,7 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   font-size: 1.4rem;
   line-height: 2rem;
   padding: 4px 11px 6px;
-  border: 1px solid var(--border-color)
+  border: 1px solid var(--border-color);
   border-radius: 5px;
 }
 
