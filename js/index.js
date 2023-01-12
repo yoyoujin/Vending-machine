@@ -61,7 +61,7 @@ btnReturn.addEventListener('click', (event) => {
     txtPocketMoney.textContent = (inhandMoney + balance).toLocaleString() + '원';
     txtBalance.textContent = 0 + '원';
   } else {
-    alert('잔액이 잔액이 없습니다 🥹');
+    alert('잔액이 없습니다 🥹');
   }
 });
 
@@ -119,9 +119,12 @@ btnCola.forEach((item) => {
 });
 
 // 카트에 있는 콜라 클릭 시, 장바구니 빼기
+// filter를 통해서 클릭이벤트의 커렌트 데이터 네임과 같지 않은것들만 남기기?
 
 // 획득버튼 클릭 시 획득한 음료 리스트에 렌더링해주기
 btnGet.addEventListener('click', () => {});
+
+// 총 금액 표시하기
 
 // ## 3. 요구사항 명세(javascript 부분)
 // 1. 판매할 음료에 대한 데이터는 따로 분리되어 있어야 합니다. (혹은 API로 받아야 합니다.)

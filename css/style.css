@@ -38,6 +38,7 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   padding: 31px 27px 28px;
   background-color: var(--white-color);
   margin-right: 28px;
+  border-radius: 10px;
 }
 
 .cont-beverage {
@@ -243,6 +244,7 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   background-color: var(--white-color);
   padding: 9px 17px;
   margin-bottom: 28px;
+  border-radius: 10px;
 }
 
 .pocket-money {
@@ -264,6 +266,7 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   height: 474px;
   background-color: var(--white-color);
   padding: 25px 27px 0;
+  border-radius: 10px;
 }
 
 .got-beverage {
