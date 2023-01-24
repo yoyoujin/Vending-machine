@@ -2,6 +2,8 @@
 
 [Demo](https://yoyoujin.github.io/Vending-machine/)
 
+![image](https://user-images.githubusercontent.com/102464638/214328404-c5c55497-7dbf-466f-9c04-0bd7a1e795c8.png)
+
 ## 1. 목표
 
 - 시맨틱한 태그를 사용하여 웹 접근성에 준수하기
