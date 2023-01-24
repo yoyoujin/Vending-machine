@@ -2,8 +2,6 @@
 
 [Demo](https://yoyoujin.github.io/Vending-machine/)
 
-![image](https://user-images.githubusercontent.com/102464638/214328404-c5c55497-7dbf-466f-9c04-0bd7a1e795c8.png)
-
 ## 1. 목표
 
 - 시맨틱한 태그를 사용하여 웹 접근성에 준수하기
@@ -26,3 +24,5 @@
 - 거스름돈이 나와야 합니다.
 - 버튼을 누르면 상품이 1개씩 추가됩니다. (일반적인 자판기와 동일)
   <br><br>
+
+![image](https://user-images.githubusercontent.com/102464638/214328404-c5c55497-7dbf-466f-9c04-0bd7a1e795c8.png)
