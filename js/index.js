@@ -12,6 +12,8 @@ const btnGet = document.querySelector('.get-btn');
 const gotItemList = document.querySelector('.got-page');
 const totalMoney = document.querySelector('.total-money');
 
+console.log(colaData);
+
 // 콜라 리스트 렌더링
 colaData.forEach((item) => {
   const itemList = document.createElement('li');
