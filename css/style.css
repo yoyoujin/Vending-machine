@@ -5,7 +5,6 @@
   --point-color: #6327fe;
 }
 
-/* html배경컬러 --main-color랑 같은지 확인할 것 !*/
 html {
   background-color: var(--main-color);
 }
@@ -15,11 +14,6 @@ body {
   width: 748px;
   margin: 0 auto;
 }
-
-/* strong {
-  display: block;
-} 
-strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
 
 .header-logo-img {
   display: block;
@@ -52,10 +46,14 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   width: 94px;
   height: 130px;
   border-radius: 10px;
-  filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.4));
   border: none;
   background-color: var(--white-color);
   padding: 11px 12px 9px;
+}
+
+.btn-beverage:hover {
+  outline: #6327fe 3px solid;
 }
 
 .beverage-img {
@@ -140,7 +138,7 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   width: 94px;
   height: 33px;
   padding: 6px 9px 8px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
 .put-txt {
@@ -162,7 +160,7 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   width: 94px;
   height: 33px;
   padding: 6px 35px 7px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
 .selected-beverage {
@@ -224,7 +222,6 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   border: 2px solid transparent;
   background-color: var(--white-color);
   border-radius: 50px;
-  /* height: 79px; */
 }
 
 .get-btn {
@@ -235,7 +232,7 @@ strong태그에 붙어있는 클래스들에서 위 요소들 다 지워주기*/
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--white-color);
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
 

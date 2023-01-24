@@ -8,10 +8,9 @@ const txtPut = document.querySelector('.put-txt');
 const btnPut = document.querySelector('.put-btn');
 const txtPocketMoney = document.querySelector('.txt-pocket-money');
 const selectedBeverage = document.querySelector('.selected-beverage');
-const selectedColaItem = document.querySelector('.selected-item');
 const btnGet = document.querySelector('.get-btn');
-
-console.log(colaData);
+const gotItemList = document.querySelector('.got-page');
+const totalMoney = document.querySelector('.total-money');
 
 // 콜라 리스트 렌더링
 colaData.forEach((item) => {
@@ -34,9 +33,6 @@ btnPut.addEventListener('click', (event) => {
   const balance = parseInt(txtBalance.textContent.replaceAll(',', ''));
   const inhandMoney = parseInt(txtPocketMoney.textContent.replaceAll(',', ''));
 
-  console.log(inputCost);
-  console.log(inhandMoney);
-
   if (inputCost <= inhandMoney) {
     if (balance === 0) {
       txtBalance.textContent = inputCost.toLocaleString() + '원';
@@ -47,7 +43,7 @@ btnPut.addEventListener('click', (event) => {
 
     txtPut.value = null;
   } else {
-    alert(' 돈 없어 너...');
+    alert('소지금이 부족합니다 🥹');
   }
 });
 
@@ -91,6 +87,7 @@ btnCola.forEach((item) => {
 
       if (!isSelected) {
         cartList.dataset.name = item.dataset.name;
+        cartList.dataset.price = item.dataset.price;
 
         cartList.innerHTML = `
         <button type="button" class="selected-item">
@@ -113,21 +110,37 @@ btnCola.forEach((item) => {
         );
       }
     } else {
-      alert('잔액이 없습니다 🥹');
+      alert('잔액이 부족합니다 🥹 돈을 입금해주세요!');
     }
   });
 });
 
-// 카트에 있는 콜라 클릭 시, 장바구니 빼기
-// filter를 통해서 클릭이벤트의 커렌트 데이터 네임과 같지 않은것들만 남기기?
-
 // 획득버튼 클릭 시 획득한 음료 리스트에 렌더링해주기
-btnGet.addEventListener('click', () => {});
+btnGet.addEventListener('click', () => {
+  let isGot = false;
+  let totalPrice = 0;
 
-// 총 금액 표시하기
+  for (const selectedList of selectedBeverage.querySelectorAll('li')) {
+    for (const gotList of gotItemList.querySelectorAll('li')) {
+      let gotItemCounter = gotItemList.querySelector('.count-item');
+      if (selectedList.dataset.name === gotList.dataset.name) {
+        gotItemCounter.textContent =
+          Number(gotItemCounter.textContent) +
+          Number(selectedList.querySelector('.count-item').textContent);
+        isGot = true;
+      }
+      break;
+    }
+    if (!isGot) {
+      gotItemList.appendChild(selectedList);
+    }
+  }
+  selectedBeverage.innerHTML = null;
 
-// ## 3. 요구사항 명세(javascript 부분)
-// 1. 판매할 음료에 대한 데이터는 따로 분리되어 있어야 합니다. (혹은 API로 받아야 합니다.)
-// 2. 돈의 입금과 음료의 선택 시점은 자유롭지만 돈이 모자라면 음료가 나와서는 안됩니다.
-// 3. 거스름돈이 나와야 합니다.
-// 4. 버튼을 누르면 상품이 1개씩 추가됩니다. (일반적인 자판기와 동일)
+  // 총 금액 표시하기
+  gotItemList.querySelectorAll('li').forEach((gotList) => {
+    console.log(gotList);
+    totalPrice += gotList.dataset.price * Number(gotList.querySelector('.count-item').textContent);
+  });
+  totalMoney.textContent = `총금액 : ${totalPrice.toLocaleString()}원`;
+});
